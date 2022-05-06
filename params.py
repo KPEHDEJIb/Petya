@@ -9,4 +9,4 @@ GAMECHOOSE_MARKUP = ReplyKeyboardMarkup([['5', 'Поле Чудес']], resize_k
 GAMEMODE_MARKUP = ReplyKeyboardMarkup([['Групповой', 'Одиночный']], resize_keyboard=True)
 FIVEROOMCASE_MARKUP = ReplyKeyboardMarkup([['1', '2', '3'], ['4', 'Случайный', '5']], resize_keyboard=True)
 CASES, FIVE_EXERCISES = 5, 25
-FOFD_EXERCISES = 5
+FOFD_EXERCISES = 25
