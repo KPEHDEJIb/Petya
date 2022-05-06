@@ -492,8 +492,7 @@ def bstart(update: Update, context: CallbackContext):
             return
 
         elif user_id in players_info['available_players']['Five'] or \
-                user_id in players_info['available_players']['FofD'] or \
-                user_id in players_info['available_players']['Mono']:
+                user_id in players_info['available_players']['FofD']:
             update.message.reply_text('Ты уже состоишь в поиске сессии.')
             return
 
@@ -1158,7 +1157,7 @@ def db_score_editor(winplr_id, winplr_score, game: str, defplr_id=None):
         if not db_winplr_id:
             db_cur.execute(f'INSERT INTO Players(user_id) VALUES({winplr_id})')
             db_con.commit()
-            for i in ['Five', 'FofD', 'Mono']:
+            for i in ['Five', 'FofD']:
                 db_cur.execute(f'INSERT INTO {i}(player_id, score, games, wins, defeats) '
                                f'VALUES({winplr_id}, 0, 0, 0, 0)')
                 db_con.commit()
@@ -1176,7 +1175,7 @@ def db_score_editor(winplr_id, winplr_score, game: str, defplr_id=None):
         if not db_defplr_id:
             db_cur.execute(f'INSERT INTO Players(user_id) VALUES({defplr_id})')
             db_con.commit()
-            for i in ['Five', 'FofD', 'Mono']:
+            for i in ['Five', 'FofD',]:
                 db_cur.execute(f'INSERT INTO {i}(player_id, score, games, wind, defeats) '
                                f'VALUES({defplr_id}, 0, 0, 0 ,0)')
                 db_con.commit()
