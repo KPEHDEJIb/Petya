@@ -1,0 +1,38 @@
+{
+  "starting_players": {},
+  "available_players": {
+    "Five": [],
+    "FofD": [],
+    "Mono": []
+  },
+  "players_in_play": {
+    "Five": {
+      "group": {},
+      "room": {}
+    },
+    "FofD": {
+      "group": {},
+      "room": {}
+    },
+    "Mono": {}
+  },
+  "groups": {
+    "Five": [],
+    "FofD": [],
+    "Mono": []
+  },
+  "next_group_id": {
+    "Five": 0,
+    "FofD": 0,
+    "Mono": 0
+  },
+  "rooms": {
+    "Five": [],
+    "FofD": [],
+    "Mono": []
+  },
+  "next_room_id": {
+    "Five": 0,
+    "FofD": 0
+  }
+}
