@@ -2,8 +2,7 @@
   "starting_players": {},
   "available_players": {
     "Five": [],
-    "FofD": [],
-    "Mono": []
+    "FofD": []
   },
   "players_in_play": {
     "Five": {
@@ -13,23 +12,19 @@
     "FofD": {
       "group": {},
       "room": {}
-    },
-    "Mono": {}
+    }
   },
   "groups": {
     "Five": [],
-    "FofD": [],
-    "Mono": []
+    "FofD": []
   },
   "next_group_id": {
     "Five": 0,
-    "FofD": 0,
-    "Mono": 0
+    "FofD": 0
   },
   "rooms": {
     "Five": [],
-    "FofD": [],
-    "Mono": []
+    "FofD": []
   },
   "next_room_id": {
     "Five": 0,
