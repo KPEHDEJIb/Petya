@@ -620,41 +620,6 @@ def bstop(update: Update, context: CallbackContext):
         json.dump(players_info, f, ensure_ascii=False, indent=2)
 
 
-def admin_stop(update: Update, context: CallbackContext):
-    with open('data/players.json', 'r', encoding='UTF-8') as f:
-        players_info = json.load(f)
-
-    user_id = str(update.message.from_user.id)
-
-    if user_id in WHITELIST:
-        update.message.bot.send_message(SERVER_GROUP_ID, f'{date_maker(update)}\n==ADMIN COMMAND START==')
-
-        try:
-            command = update.message.text.split()
-
-            if len(command) > 2:
-                raise Exception('too many parameters')
-            elif len(command) == 1:
-                raise Exception('no group id found')
-            elif not command[1].isdigit():
-                raise Exception('id is not an int type')
-            else:
-                group_id = command[1]
-
-            if int(group_id) not in players_info['groups']['Five']:
-                raise Exception('group not found')
-
-            group_deleter_five(update, players_info, group_id)
-
-            update.message.bot.send_message(SERVER_GROUP_ID, f'{date_maker(update)}\n==ADMIN COMMAND DONE==')
-
-        except Exception as excep:
-            update.message.bot.send_message(SERVER_GROUP_ID, f'{date_maker(update)}\n==ADMIN COMMAND ERROR:\n{excep}==')
-
-    else:
-        update.message.reply_text('У тебя недостаточно прав, чтобы такое делать.')
-
-
 def viewscore(update: Update, context: CallbackContext):
     with open('data/players.json', 'r', encoding='UTF-8') as f:
         players_info = json.load(f)
